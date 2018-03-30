@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="44682" started-at="2018-03-30T09:50:00Z" finished-at="2018-03-30T09:50:45Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="44682" started-at="2018-03-30T09:50:00Z" finished-at="2018-03-30T09:50:45Z">
+      <class name="com.gitjenkinsprac.yahoo.YahooScraping">
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.gitjenkinsprac.yahoo.YahooScraping@2c8d66b2]" name="initDriver" is-config="true" duration-ms="3986" started-at="2018-03-30T09:50:00Z" finished-at="2018-03-30T09:50:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method status="PASS" signature="openYahoo()[pri:1, instance:com.gitjenkinsprac.yahoo.YahooScraping@2c8d66b2]" name="openYahoo" duration-ms="23504" started-at="2018-03-30T09:50:04Z" finished-at="2018-03-30T09:50:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openYahoo -->
+        <test-method status="PASS" signature="createWriter()[pri:2, instance:com.gitjenkinsprac.yahoo.YahooScraping@2c8d66b2]" name="createWriter" duration-ms="26" started-at="2018-03-30T09:50:28Z" finished-at="2018-03-30T09:50:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createWriter -->
+        <test-method status="PASS" signature="passTicker()[pri:3, instance:com.gitjenkinsprac.yahoo.YahooScraping@2c8d66b2]" name="passTicker" duration-ms="13667" started-at="2018-03-30T09:50:28Z" finished-at="2018-03-30T09:50:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- passTicker -->
+        <test-method status="PASS" signature="driverClose()[pri:4, instance:com.gitjenkinsprac.yahoo.YahooScraping@2c8d66b2]" name="driverClose" duration-ms="3465" started-at="2018-03-30T09:50:41Z" finished-at="2018-03-30T09:50:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverClose -->
+      </class> <!-- com.gitjenkinsprac.yahoo.YahooScraping -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

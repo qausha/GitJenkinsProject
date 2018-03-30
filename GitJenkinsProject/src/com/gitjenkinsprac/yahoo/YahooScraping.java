@@ -11,6 +11,8 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 public class YahooScraping {
 
@@ -19,30 +21,31 @@ public class YahooScraping {
 	static FileWriter fr; //new FileWriter("D:\\Ashik\\bufferedreader\\yahooscraping.xlsx");
 	static BufferedWriter br; //new BufferedWriter(fr);
 
-	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
-		initDriver();
-		openYahoo();
-		createWriter();
-		passTicker();
-		driverClose();
-
-	}
-
+//	public static void main(String[] args) throws IOException {
+//		// TODO Auto-generated method stub
+//		initDriver();
+//		openYahoo();
+//		createWriter();
+//		passTicker();
+//		driverClose();
+//
+//	}
+@BeforeClass
 	public static void initDriver() {
 
 		System.setProperty("webdriver.chrome.driver",
 				"D:\\chromedriver\\chromedriver_win32\\chromedriver_2.37.exe");
 		driver = new ChromeDriver();
-
+		System.out.println("browser open");
 	}
-
+@Test(priority=1)
 	public static void openYahoo() {
 		driver.get("https://finance.yahoo.com/");
 		driver.manage().window().maximize();
 		wait(1000);
 
 	}
+@Test(priority=2)
 	public static void createWriter() throws IOException {
 		
 		try {
@@ -57,7 +60,7 @@ public class YahooScraping {
 		}
 		
 	}
-
+@Test(priority=3)
 	public static void passTicker() throws IOException {
 		
 		List<String> tickerslist = Arrays.asList(tickers.split(","));
@@ -96,7 +99,7 @@ public class YahooScraping {
 		br.flush();
 		//br.close();
 	}
-
+@Test(priority=4)
 	public static void driverClose() {
 		driver.close();
 	}
